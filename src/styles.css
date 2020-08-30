@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@font-face {
+    font-family: "Mabry Light";
+    src: url("./assets/fonts/MabryDeezer/MabryDeezer-Light.woff2") format("woff2"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Light.woff") format("woff"),
+         url("assets/fonts/MabryDeezer/MabryDeezer-Light.ttf") format("ttf"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Light.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Mabry Black";
+    src: url("./assets/fonts/MabryDeezer/MabryDeezer-Black.woff2") format("woff2"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Black.woff") format("woff"),
+         url("assets/fonts/MabryDeezer/MabryDeezer-Black.ttf") format("ttf"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Black.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Mabry Medium";
+    src: url("./assets/fonts/MabryDeezer/MabryDeezer-Medium.woff2") format("woff2"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Medium.woff") format("woff"),
+         url("assets/fonts/MabryDeezer/MabryDeezer-Medium.ttf") format("ttf"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Medium.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Mabry Bold";
+    src: url("./assets/fonts/MabryDeezer/MabryDeezer-Bold.woff2") format("woff2"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Bold.woff") format("woff"),
+         url("assets/fonts/MabryDeezer/MabryDeezer-Bold.ttf") format("ttf"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Bold.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Mabry Regular";
+    src: url("./assets/fonts/MabryDeezer/MabryDeezer-Regular.woff2") format("woff2"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Regular.woff") format("woff"),
+         url("assets/fonts/MabryDeezer/MabryDeezer-Regular.ttf") format("ttf"),
+         url("./assets/fonts/MabryDeezer/MabryDeezer-Regular.eot") format("eot");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: block;
+    font-family: "Mabry Bold";
+    height: 100vh;
+}
+
+app-root{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+app-root > * {
+    flex-shrink:0;
+}
+
+.left-hollow-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: solid #26303C 4px;
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin: 60px auto 60px auto;*/
+    text-align: center;
+    background-color: #ffffff;
+}

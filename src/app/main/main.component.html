@@ -1,0 +1,46 @@
+
+<div class="app-container">
+    <div class="left-side side">
+        
+        <div class="user-list-container">
+            <app-user *ngFor="let user of userList" [user]="user" (disconnection)="disconnect($event)"></app-user>
+    
+            <div class="margin-container plus">
+                <div class="left-hollow-container">
+                    <div *ngIf="!choose" class="flex-parent-center-vertically-horizontally">
+                        <button id="plus-button"  (click)="choose = true">+</button>
+                    </div>
+        
+                    <div *ngIf="choose" id="choice-buttons">
+                        <button id="deezer-button" (click)="addAccount('deezer')">
+                            <img src="../../assets/deezer-logo-H.jpg"/>
+                        </button>
+        
+                        <button id="spotify-button" (click)="addAccount('spotify')">
+                            <img src="../../assets/spotify-logo-H.jpg"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="right-side side">
+        <form [formGroup]="playlistForm" 
+            (ngSubmit)="onSubmit(playlistForm.value)">
+            <input id="name" 
+                required 
+                type="text" 
+                placeholder="Your playlist name..." 
+                formControlName="name"/>
+            <button type="submit"  
+                title="You need at least 2 accounts of 2 different platforms in order to create a playlist"
+                [disabled]="!playlistForm.valid">Create</button>
+        </form>
+    </div>
+    
+</div>
+
+
+

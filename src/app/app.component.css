@@ -1,0 +1,13 @@
+app-main{
+    flex-grow: 1;
+}
+
+app-error{
+    position :fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    right:0;
+    background-color: rgba(32, 33, 34, 0.5);
+    z-index : 4;
+}
