@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, Injectable, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ApiService } from '../services/api/api.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
@@ -13,6 +13,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./main.component.css']
 })
 
+@Injectable()
 export class MainComponent implements OnInit {
 
   choose = false;
@@ -26,7 +27,7 @@ export class MainComponent implements OnInit {
   
   playlistForm;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private formBuilder: FormBuilder, private document: Document) {
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private formBuilder: FormBuilder, @Inject(DOCUMENT) private document: Document) {
     this.playlistForm = this.formBuilder.group({
       name: new FormControl(this.name, [
         Validators.required, 
