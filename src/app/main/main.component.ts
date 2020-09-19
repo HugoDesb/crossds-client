@@ -4,6 +4,8 @@ import { ApiService } from '../services/api/api.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { User } from '../User';
 import { observable, computed } from 'mobx-angular';
+import { DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-main',
@@ -24,7 +26,7 @@ export class MainComponent implements OnInit {
   
   playlistForm;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private formBuilder: FormBuilder) {
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private formBuilder: FormBuilder, private document: Document) {
     this.playlistForm = this.formBuilder.group({
       name: new FormControl(this.name, [
         Validators.required, 
@@ -80,7 +82,7 @@ export class MainComponent implements OnInit {
 
   addAccount(service:string): void {
     this.apiService.getOAuthUrl(service).subscribe(url => {
-      window.location.href=url;
+      this.document.location.href=url;
     })
   }
 
@@ -113,8 +115,6 @@ export class MainComponent implements OnInit {
 
   private getLoggedUsers() : User[] {
     var tmp = JSON.parse(localStorage.getItem("users"));
-    console.log("TA RACE");
-    console.log(tmp);
     if(tmp == null){
       return [];
     }else{
