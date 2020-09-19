@@ -1,6 +1,7 @@
 {
     "/api": {
-        "target": "https://protected-tundra-83090.herokuapp.com/",
-        "secure": false
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true
       }
 }
