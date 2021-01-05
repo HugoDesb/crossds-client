@@ -14,4 +14,4 @@ jobs:
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1 ## replace by latest version without it you will see Expected format {org}/{repo}[/path]@ref. Actual 'AhsanAyaz/angular-deploy-gh-pages-actions',Input string was not in a correct format.
       with:
         github_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # see the Configuration section for how you can create secrets
-        base_href: https://hugodesb.github.io/matelist/
+        angular_dist_build_folder: dist/web # why ? : https://github.com/AhsanAyaz/angular-deploy-gh-pages-actions/issues/23
