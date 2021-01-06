@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'crossds-client';
+  title = 'matelist';
   displayError = false;
-  
+
 }
