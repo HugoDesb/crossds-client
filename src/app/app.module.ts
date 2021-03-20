@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { ErrorComponent } from './error/error.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ErrorComponent } from './error/error.component';
     MainComponent,
     UserComponent,
     ErrorComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
